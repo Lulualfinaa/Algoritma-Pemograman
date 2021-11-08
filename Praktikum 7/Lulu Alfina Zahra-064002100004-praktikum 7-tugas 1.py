@@ -3,13 +3,13 @@
 
 def cekBilangan(bil):
     if bil == 1:
-        print(f"Bilangan ini {bil} adalah bilangan prima")
+        print(f"Bilangan ini {bil} adalah prima")
     elif bil == 2:
-        print(f"Bilangan ini {bil} adalah bilangan prima")
+        print(f"Bilangan ini {bil} adalah prima")
     else:
-        global x 
+        global z 
         for x in range(2, bil):
-            if bil % x == 0:
+            if bil % z == 0:
                 stat = 0 
                 break
             else:
@@ -18,10 +18,10 @@ def cekBilangan(bil):
         
 def cekStat(stat):
     if stat == 0:
-        print(f"Bilangan ini {bil} adalah bilangan prima")
-        print(f"{x} kali {bil//x} = {bil}")
+        print(f"Bilangan ini {bil} adalah prima")
+        print(f"{z} kali {bil//z} = {bil}")
     else:
-        print(f"{bil} adalah bilangan prima")
+        print(f"{bil} adalah prima")
 
 z = 1
 while z == 1:                    
