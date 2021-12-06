@@ -1,32 +1,35 @@
 @author: lulualfina15
 """
 
-class siswa:
+class mahasiswa:
     
     jumlah = 0
     
-    def __init__(self,nama,tahun):
+    def __init__(self,nama,nim,jurusan):
         self.nama = str.upper(nama)
-        self.tahun = str(tahun)
-        siswa.jumlah += 1
+        self.nim = str(nim)
+        self.jurusan = str(jurusan)
+        mahasiswa.jumlah += 1
         
     def biodata(self):
-        return str(f'{self.nama} ; {self.tahun}')
+        return str(f'{self.nama} ;  {self.nim} ; {self.jurusan}')
     
     def cetak(self):
         print()
-        print('Nama:',self.nama)
-        print('Tahun:',self.tahun)
+        print('nama:',self.nama)
+        print('nim:',self.nim)
+        print('jurusan:',self.jurusan)
         print()
-        input(f'Jumlah siswa adalah {siswa.jumlah} orang\nPRESS ENTER')
+        input(f'Jumlah mahasiswa adalah {mahasiswa.jumlah} orang\nPRESS ENTER')
 
 
 while True:
-    print(f'\nsiswa {(siswa.jumlah)+1}\nKetik -2 untuk berhenti!')
-    x = str(input('Nama: '))
+    print(f'\nmahasiswa {(mahasiswa.jumlah)+1}\nKetik -2 untuk berhenti!')
+    x = str(input('nama: '))
     if x == '-2':
         break
-    y = str(input('Tahun: '))
-    n = siswa(x,y)
+    y = str(input('nim: '))
+    z = str(input('jurusan: '))
+    n = mahasiswa(x,y,z)
     
     n.cetak()
