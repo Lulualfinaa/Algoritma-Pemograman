@@ -70,8 +70,8 @@ X = True
 while X == True:
     hasil = DATAFILE.DataFrame(data)
     print('\nLUAS DAN POPULASI NEGARA DITIAP DUNIA\n\n',hasil)
-    print("input 1 untuk mencari data mean")
-    print("input 2 untuk mencari standart devisiasi")
+    print("masukkan -2 untuk mencari data mean")
+    print("masukkan -1 untuk mencari standart devisiasi")
     
     isi = int(input("masukan pilihan:"))
     mean = hasil.groupby(['Benua']).mean()
@@ -79,11 +79,11 @@ while X == True:
     if isi == 0:
         print("\nTEKS TELAH TERSIMPAN")
         X = False
-    elif isi == 1:
+    elif isi == -2:
         print('\nRata-rata data:\n',mean)
         write(mean)
         read()
-    elif isi == 2:
+    elif isi == -1:
         print('\nStandar Deviasi:\n',std)
         write(std)
         read()
